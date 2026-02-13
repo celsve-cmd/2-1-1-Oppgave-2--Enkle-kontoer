@@ -7,12 +7,6 @@
    vis resultatet på siden*/
 
 
-const siden = document.getElementById('app')
-
-let correctName = 'Navn'
-let correctPassword = '123'
-
-let balance = 0
 
 
 
@@ -27,21 +21,7 @@ function logInPage() {
             `
 }
 
-function setUserName(userInput) {
-    userName = userInput
-}
 
-function setPassword(passwordInput) {
-    userPassword = passwordInput
-}
-
-function logIn() {
-    if (userName == correctName && userPassword == correctPassword) {
-        loggedInPage()
-    } else {
-        alert('Feil brukernavn eller passord!')
-    }
-}
 
 function loggedInPage() {
     siden.innerHTML = /*HTML*/`
@@ -56,23 +36,3 @@ function loggedInPage() {
     <button id="logOut" onclick = "logOut()">Logg ut</button>`
 }
 
-function addMoney() {
-    let input = document.getElementById("money").value
-    balance += Number(input)
-
-    document.getElementById("saldo").innerHTML =
-        `Din saldo er ${balance} kr`
-}
-
-function removeMoney(){
-    let input = document.getElementById("money").value
-    balance -= Number(input)
-    document.getElementById("saldo").innerHTML =
-        `Din saldo er ${balance} kr`
-}
-
-function logOut() {
-    userName = ''
-    userPassword = ''
-    logInPage()
-}
