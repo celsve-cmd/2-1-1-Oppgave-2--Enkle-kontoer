@@ -6,10 +6,6 @@
    bruker if/else til å sjekke om saldoen blir negativ: hvis ja, vis advarsel; hvis nei, oppdater saldoen
    vis resultatet på siden*/
 
-
-
-
-
 logInPage()
 function logInPage() {
     siden.innerHTML = /*HTML*/ `
@@ -20,8 +16,6 @@ function logInPage() {
             <button onclick ="logIn()">Logg inn</button>
             `
 }
-
-
 
 function loggedInPage() {
     siden.innerHTML = /*HTML*/`
@@ -35,4 +29,3 @@ function loggedInPage() {
     <br>
     <button id="logOut" onclick = "logOut()">Logg ut</button>`
 }
-
